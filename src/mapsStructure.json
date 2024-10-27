@@ -1,0 +1,324 @@
+{
+    "Maps": [
+        {
+            "MapName": "Main Babe",
+            "Areas": [
+                {
+                    "AreaName": "Redcrown Woods",
+                    "Screens": [
+                        "redcrown (1).png",
+                        "redcrown (2).png",
+                        "redcrown (3).png",
+                        "redcrown (4).png",
+                        "redcrown (5).png"
+                    ]
+                },
+                {
+                    "AreaName": "Colossal Drain",
+                    "Screens": [
+                        "drain (1).png",
+                        "drain (2).png",
+                        "drain (3).png",
+                        "drain (4).png",
+                        "drain (5).png"
+                    ]
+                },
+                {
+                    "AreaName": "False Kings' Keep",
+                    "Screens": [
+                        "false king (1).png",
+                        "false king (2).png",
+                        "false king (3).png",
+                        "false king (4).png"
+                    ]
+                },
+                {
+                    "AreaName": "Bargainburg",
+                    "Screens": [
+                        "bargain (1).png",
+                        "bargain (2).png",
+                        "bargain (3).png",
+                        "bargain (4).png",
+                        "bargain (5).png"
+                    ]
+                },
+                {
+                    "AreaName": "Great Frontier",
+                    "Screens": [
+                        "frontier (1).png",
+                        "frontier (2).png",
+                        "frontier (3).png",
+                        "frontier (4).png",
+                        "frontier (5).png",
+                        "frontier (6).png"
+                    ]
+                },
+                {
+                    "AreaName": "Windswept Bluff",
+                    "Screens": [
+                        "windswept (1).png"
+                    ]
+                },
+                {
+                    "AreaName": "Stormwall Pass",
+                    "Screens": [
+                        "stormwall (1).png",
+                        "stormwall (2).png",
+                        "stormwall (3).png",
+                        "stormwall (4).png",
+                        "stormwall (5).png",
+                        "stormwall (6).png"
+                    ]
+                },
+                {
+                    "AreaName": "Blue Ruin",
+                    "Screens": [
+                        "blue (1).png",
+                        "blue (2).png",
+                        "blue (3).png"
+                    ]
+                },
+                {
+                    "AreaName": "Chapel Perilous",
+                    "Screens": [
+                        "chapel (1).png",
+                        "chapel (2).png",
+                        "chapel (3).png",
+                        "chapel (4).png"
+                    ]
+                },
+                {
+                    "AreaName": "The Tower",
+                    "Screens": [
+                        "tower (1).png",
+                        "tower (2).png",
+                        "tower (3).png",
+                        "tower (4).png"
+                    ]
+                }
+            ]
+        },
+        {
+            "MapName": "New Babe+",
+            "Areas": [
+                {
+                    "AreaName": "Imp Room",
+                    "Screens": [
+                        "imp (1).png",
+                        "imp (2).png"
+                    ]
+                },
+                {
+                    "AreaName": "Brightcrown Woods",
+                    "Screens": [
+                        "brightcrown (1).png",
+                        "brightcrown (2).png",
+                        "brightcrown (3).png",
+                        "brightcrown (4).png",
+                        "brightcrown (5).png",
+                        "brightcrown (6).png"
+                    ]
+                },
+                {
+                    "AreaName": "Colossal Dungeon",
+                    "Screens": [
+                        "colossal (1).png",
+                        "colossal (2).png",
+                        "colossal (3).png",
+                        "colossal (4).png",
+                        "colossal (5).png",
+                        "colossal (6).png",
+                        "colossal (7).png"
+                    ]
+                },
+                {
+                    "AreaName": "False Kings' Castle",
+                    "Screens": [
+                        "kings castle (1).png",
+                        "kings castle (2).png",
+                        "kings castle (3).png",
+                        "kings castle (4).png"
+                    ]
+                },
+                {
+                    "AreaName": "Underburg",
+                    "Screens": [
+                        "underbourg (1).png",
+                        "underbourg (2).png",
+                        "underbourg (3).png",
+                        "underbourg (4).png",
+                        "underbourg (5).png",
+                        "underbourg (6).png",
+                        "underbourg (7).png"
+                    ]
+                },
+                {
+                    "AreaName": "Lost Frontier",
+                    "Screens": [
+                        "lost (1).png",
+                        "lost (2).png",
+                        "lost (3).png",
+                        "lost (4).png",
+                        "lost (5).png",
+                        "lost (6).png",
+                        "lost (7).png"
+                    ]
+                },
+                {
+                    "AreaName": "Hidden Kingdom",
+                    "Screens": [
+                        "hidden (1).png",
+                        "hidden (2).png",
+                        "hidden (3).png",
+                        "hidden (4).png",
+                        "hidden (5).png",
+                        "hidden (6).png"
+                    ]
+                },
+                {
+                    "AreaName": "Black Sanctum",
+                    "Screens": [
+                        "black (1).png",
+                        "black (2).png",
+                        "black (3).png",
+                        "black (4).png",
+                        "black (5).png",
+                        "black (6).png"
+                    ]
+                },
+                {
+                    "AreaName": "Deep Ruin",
+                    "Screens": [
+                        "deep (1).png",
+                        "deep (2).png",
+                        "deep (3).png",
+                        "deep (4).png",
+                        "deep (5).png"
+                    ]
+                },
+                {
+                    "AreaName": "Dark Tower",
+                    "Screens": [
+                        "dark (1).png",
+                        "dark (2).png",
+                        "dark (3).png",
+                        "dark (4).png",
+                        "dark (5).png",
+                        "dark (6).png"
+                    ]
+                }
+            ]
+        },
+        {
+            "MapName": "Ghost of the Babe",
+            "Areas": [
+                {
+                    "AreaName": "Philosophers Forest",
+                    "Screens": [
+                        "forest (1).png",
+                        "forest (2).png",
+                        "forest (3).png",
+                        "forest (4).png",
+                        "forest (5).png"
+                    ]
+                },
+                {
+                    "AreaName": "The Hole",
+                    "Screens": [
+                        "hole (1).png",
+                        "hole (2).png",
+                        "hole (3).png",
+                        "hole (4).png"
+                    ]
+                },
+                {
+                    "AreaName": "Bog",
+                    "Screens": [
+                        "bog (1).png",
+                        "bog (2).png",
+                        "bog (3).png",
+                        "bog (4).png",
+                        "bog (5).png",
+                        "bog (6).png",
+                        "bog (7).png"
+                    ]
+                },
+                {
+                    "AreaName": "Moulding Manor",
+                    "Screens": [
+                        "manor (1).png",
+                        "manor (2).png",
+                        "manor (3).png",
+                        "manor (4).png",
+                        "manor (5).png",
+                        "manor (6).png",
+                        "manor (7).png",
+                        "manor (8).png"
+                    ]
+                },
+                {
+                    "AreaName": "Bugstalk",
+                    "Screens": [
+                        "bug (1).png",
+                        "bug (2).png",
+                        "bug (3).png",
+                        "bug (4).png",
+                        "bug (5).png",
+                        "bug (6).png",
+                        "bug (7).png"
+                    ]
+                },
+                {
+                    "AreaName": "House of Nine Lives",
+                    "Screens": [
+                        "cat (1).png",
+                        "cat (2).png",
+                        "cat (3).png",
+                        "cat (4).png",
+                        "cat (5).png",
+                        "cat (6).png",
+                        "cat (7).png"
+                    ]
+                },
+                {
+                    "AreaName": "Phantom Tower",
+                    "Screens": [
+                        "phantom (1).png",
+                        "phantom (2).png",
+                        "phantom (3).png",
+                        "phantom (4).png",
+                        "phantom (5).png",
+                        "phantom (6).png",
+                        "phantom (7).png",
+                        "phantom (8).png",
+                        "phantom (9).png"
+                    ]
+                },
+                {
+                    "AreaName": "Halted Ruin",
+                    "Screens": [
+                        "halted (1).png",
+                        "halted (2).png",
+                        "halted (3).png",
+                        "halted (4).png",
+                        "halted (5).png",
+                        "halted (6).png",
+                        "halted (7).png",
+                        "halted (8).png"
+                    ]
+                },
+                {
+                    "AreaName": "Tower of Antumbra",
+                    "Screens": [
+                        "sand (1).png",
+                        "sand (2).png",
+                        "sand (3).png",
+                        "sand (4).png",
+                        "sand (5).png",
+                        "sand (6).png"
+                    ]
+                }
+            ]
+        }
+    ]
+}

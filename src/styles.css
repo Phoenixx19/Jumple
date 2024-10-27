@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+    font-family: JKFontBold;
+}
+
+@font-face {
+    font-family: JKfontBold;
+    src: url(./ttf_litter_lover2_bold.ttf);
+}
+
+@font-face {
+    font-family: JKFontMini;
+    src: url(./ttf_entercommand_bold.ttf);
+}
+
+
+
+
+
+body {
+    margin: 0;
+    width: 100dvw;
+    min-width:600px;
+    background-image: url("/Maps/jkbackground.jpeg");
+    background-size: cover;
+    background-position: bottom;
+    animation: Up 2000s linear infinite alternate;
+}
+
+.background{
+    width: 100%;
+    height: 100dvh;
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+@keyframes Up {
+    from {background-position: bottom;}
+    to {background-position: top;}
+}
+
+#root {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.topBar{
+    background-color: #181414;
+    width: 100%;
+    border-bottom: solid rgb(53, 53, 53) 1px;
+    text-align: center;
+    
+    margin-bottom: 1rem;
+}
+
+.guessBackground{
+    background-color: #1a1a1a;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 5px;
+    outline: #383838 solid 1px;
+}
+
+.areaBackground{
+    padding: 1rem;
+}
+
+.guessMapButton[data-custom-disable="true"] {
+    position: relative;
+    width: fit-content;
+}
+
+.guessMapButton[data-custom-disable="true"]::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0);
+    z-index: 1;
+}
+
+.guessedNumbers{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    font-size: 20px;
+}
+
+.logo{
+    margin: 0;
+    font-size: 60px;
+    color: white;
+}
+
+.number{
+    padding: 1rem;
+    color: #91170f;
+    background-color: #e37d76;
+    border-radius: 8px;
+}
+
+.timer,
+.nextScreenText{
+    margin: 0;
+    font-size: 30px;
+    color: white;
+}
+
+.timer{
+    width: 5ch;
+    vertical-align:middle;
+}
+
+.timerDiv{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.signature{
+    text-align: end;
+    margin-right: 1rem;
+    color: white;
+}
