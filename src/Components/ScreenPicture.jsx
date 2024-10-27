@@ -39,6 +39,12 @@ const ScreenPicture = () => {
     const [zoomState, setZoomState] = useState(initialZoom);
     const [sizeState, setSizeState] = useState(initialSize);
 
+    const [mistakeCount, setMistakeCount] = useState(0);
+
+    function incrementMistake(){
+        setMistakeCount(mistakeCount+1);
+    }
+
 
     function decreaseZoom() {
         const newZoom = zoomState - 1;
@@ -62,10 +68,11 @@ const ScreenPicture = () => {
 
     const [isMapGuessed, setIsMapGuessed] = useState(false);
     const [isAreaGuessed, setIsAreaGuessed] = useState(false);
+    const [isScreenGuessed, setIsScreenGuessed] = useState(false);
 
     return (
         <>
-            <Paper sx={{ marginBottom: "1rem"}} variant="outline" >
+            <Paper variant="outline" >
                 <div style={{
                     aspectRatio: 4 / 3,
                     width: "28rem",
@@ -79,16 +86,19 @@ const ScreenPicture = () => {
                 }}></div>
             </Paper>
 
+            <Paper variant="outline" sx={{padding: "0.7rem", borderTopLeftRadius: 0, borderTopRightRadius: 0, marginBottom: "0.5rem"}}>
+                <p style={{margin: 0, fontSize: "20px", color: isScreenGuessed ? "#11910f" : "white"}}>Mistakes: {mistakeCount}</p>
+            </Paper>
 
             <Grid2 container spacing={2} sx={{width: "35rem"}}>
                 <Grid2 size={12}>
-                    <MapGuess decreaseZoom={decreaseZoom} setIsMapGuessed={setIsMapGuessed} />
+                    <MapGuess decreaseZoom={decreaseZoom} setIsMapGuessed={setIsMapGuessed} incrementMistake={incrementMistake} />
                 </Grid2>
                 <Grid2 size={6}>
-                    <AreaGuess decreaseZoom={decreaseZoom} isMapGuessed={isMapGuessed} setIsAreaGuessed={setIsAreaGuessed} />
+                    <AreaGuess decreaseZoom={decreaseZoom} isMapGuessed={isMapGuessed} setIsAreaGuessed={setIsAreaGuessed} incrementMistake={incrementMistake}/>
                 </Grid2>
                 <Grid2 size={6}>
-                    <ScreenNumberGuess decreaseZoom={decreaseZoom} isAreaGuessed={isAreaGuessed} unzoom={unzoom} />
+                    <ScreenNumberGuess decreaseZoom={decreaseZoom} isAreaGuessed={isAreaGuessed} unzoom={unzoom} incrementMistake={incrementMistake} setIsScreenGuessed={setIsScreenGuessed}/>
                 </Grid2>
             </Grid2>
 

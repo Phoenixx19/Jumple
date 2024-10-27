@@ -25,6 +25,7 @@ export function ScreenRoll() {
                 const screenIndex = randomIndex - currentIndex;
                 const screenName = area.Screens[screenIndex];
                 
+                //DELETE "Jumple/" FOR DEPLOYMENT FOR WHATEVER THE FUCK REASON
                 const screenPath = `Jumple/Maps/${map.MapName}/${area.AreaName.replace(/'/g, '%27')}/${screenName}`;
                 
                 return {

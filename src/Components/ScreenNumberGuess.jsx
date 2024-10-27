@@ -10,7 +10,7 @@ import { Stack } from "@mui/material";
 const roll = ScreenRoll();
 
 
-const ScreenNumberGuess = ({ decreaseZoom, isAreaGuessed, unzoom }) => {
+const ScreenNumberGuess = ({ decreaseZoom, isAreaGuessed, unzoom, incrementMistake, setIsScreenGuessed }) => {
     const [number, setNumber] = useState(1);
     const [guessedNumbers, setGuessedNumbers] = useState([]);
     const [buttonDisableState, setButtonDisableState] = useState(false);
@@ -62,6 +62,7 @@ const ScreenNumberGuess = ({ decreaseZoom, isAreaGuessed, unzoom }) => {
             }]);
 
             setIsGuessed(true);
+            setIsScreenGuessed(true);
             unzoom();
         } else {
             setGuessedNumbers(oldNumbers => [...oldNumbers, {
@@ -69,9 +70,9 @@ const ScreenNumberGuess = ({ decreaseZoom, isAreaGuessed, unzoom }) => {
                 isCorrect: false
             }]);
 
-            decreaseZoom()
+            decreaseZoom();
+            incrementMistake();
         }
-
     }
 
     return (

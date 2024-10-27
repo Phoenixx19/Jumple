@@ -12,7 +12,7 @@ const roll = ScreenRoll();
 const mapIndex = roll.mapIndex;
 const initialAreas = MapsJSON.Maps[mapIndex].Areas.map(area => area.AreaName);
 
-const AreaGuess = ({ decreaseZoom, isMapGuessed, setIsAreaGuessed }) => {
+const AreaGuess = ({ decreaseZoom, isMapGuessed, setIsAreaGuessed, incrementMistake }) => {
     const [value, setValue] = useState(null);
     const [inputValue, setInputValue] = useState('');
     const [guessedAreas, setGuessedAreas] = useState([]);
@@ -65,6 +65,7 @@ const AreaGuess = ({ decreaseZoom, isMapGuessed, setIsAreaGuessed }) => {
             }]);
             setValue(null);
             decreaseZoom();
+            incrementMistake();
         }
     }
 

@@ -29,9 +29,6 @@ function App() {
                 </Grid2>
             </div>
 
-
-
-
             <ThemeProvider theme={darkTheme}>
                 <ScreenPicture />
             </ThemeProvider>
