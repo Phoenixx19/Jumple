@@ -71,20 +71,20 @@
                     ]
                 },
                 {
-                    "AreaName": "Blue Ruin",
-                    "Screens": [
-                        "blue (1).png",
-                        "blue (2).png",
-                        "blue (3).png"
-                    ]
-                },
-                {
                     "AreaName": "Chapel Perilous",
                     "Screens": [
                         "chapel (1).png",
                         "chapel (2).png",
                         "chapel (3).png",
                         "chapel (4).png"
+                    ]
+                },
+                {
+                    "AreaName": "Blue Ruin",
+                    "Screens": [
+                        "blue (1).png",
+                        "blue (2).png",
+                        "blue (3).png"
                     ]
                 },
                 {
