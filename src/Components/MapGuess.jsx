@@ -35,7 +35,7 @@ const MapGuess = ({ decreaseZoom, setIsMapGuessed, incrementMistake }) => {
             }));
 
             decreaseZoom();
-            incrementMistake();
+            incrementMistake('map');
         }
     };
 

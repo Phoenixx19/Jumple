@@ -71,7 +71,7 @@ const ScreenNumberGuess = ({ decreaseZoom, isAreaGuessed, unzoom, incrementMista
             }]);
 
             decreaseZoom();
-            incrementMistake();
+            incrementMistake('screen');
         }
     }
 

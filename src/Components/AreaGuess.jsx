@@ -65,7 +65,7 @@ const AreaGuess = ({ decreaseZoom, isMapGuessed, setIsAreaGuessed, incrementMist
             }]);
             setValue(null);
             decreaseZoom();
-            incrementMistake();
+            incrementMistake('area');
         }
     }
 
@@ -102,7 +102,7 @@ const AreaGuess = ({ decreaseZoom, isMapGuessed, setIsAreaGuessed, incrementMist
                     }}
                     variant="outlined" />}
             />
-            <Button onClick={guess} disabled={disableButton} variant="contained" size="small" sx={{ marginTop: 0.5, fontFamily: "JKFontMini", fontSize: "20px", padding: "0" }} fullWidth>Guess</Button>
+            <Button onClick={guess} disabled={disableButton} variant="contained" size="small" sx={{ marginTop: 0.5, fontFamily: "JKFontMini", fontSize: "20px", padding: "0" }} fullWidth>Guess area</Button>
 
             <Stack spacing={0.5} sx={{ marginTop: 1 }} alignItems="center" >
                 {guessedAreas.map(area => {
