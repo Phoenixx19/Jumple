@@ -21,7 +21,7 @@ function App() {
                         <div className="timerDiv"><p className="nextScreenText">Next screen: </p><Timer /></div>
                     </Grid2>
                     <Grid2 size={4}>
-                        <p className="logo">test</p>
+                        <p className="logo">JUMPLE</p>
                     </Grid2>
                     <Grid2 size={4}>
                         <p className="signature">by Mental Masochist</p>
