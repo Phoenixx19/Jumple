@@ -102,6 +102,32 @@ const ScreenPicture = () => {
 
     const shareButtonDisplay = isScreenGuessed ? "inline" : "none";
 
+
+    function gradientColor(value) {
+        value = Math.min(Math.max(value, 0), 5);
+
+        const startColor = { r: 0x11, g: 0x91, b: 0x0F };
+        const middleColor = { r: 0xF6, g: 0xFA, b: 0x02 };
+        const endColor = { r: 0x91, g: 0x17, b: 0x0F };
+
+        let r, g, b;
+
+        if (value <= 2.5) {
+            const ratio = value / 2.5;
+            r = Math.round(startColor.r + (middleColor.r - startColor.r) * ratio);
+            g = Math.round(startColor.g + (middleColor.g - startColor.g) * ratio);
+            b = Math.round(startColor.b + (middleColor.b - startColor.b) * ratio);
+        } else {
+            const ratio = (value - 2.5) / 2.5;
+            r = Math.round(middleColor.r + (endColor.r - middleColor.r) * ratio);
+            g = Math.round(middleColor.g + (endColor.g - middleColor.g) * ratio);
+            b = Math.round(middleColor.b + (endColor.b - middleColor.b) * ratio);
+        }
+        
+        const hex = `#${((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1).toUpperCase()}`;
+        return hex;
+    }
+
     return (
         <>
             <Paper variant="outline" >
@@ -120,7 +146,7 @@ const ScreenPicture = () => {
 
             <div style={{ display: "flex" }}>
                 <Paper variant="outline" sx={{ padding: "0.7rem", borderTopLeftRadius: 0, borderTopRightRadius: 0, marginBottom: "0.5rem" }}>
-                    <p style={{ margin: 0, fontSize: "20px", color: isScreenGuessed ? "#11910f" : "white" }}>Mistakes: {mistakeCount}</p>
+                    <p style={{ margin: 0, fontSize: "20px", color: isScreenGuessed ? gradientColor(mistakeCount) : "white" }}>Mistakes: {mistakeCount}</p>
                 </Paper>
 
                 <Button onClick={clipboardShare} variant={isCoppied ? "contained" : "outlined"} sx={{ marginBottom: "0.5rem", fontFamily: "JKFontMini", fontSize: "20px", display: shareButtonDisplay }} disableElevation >copy score</Button>

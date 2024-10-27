@@ -21,13 +21,13 @@ const AreaGuess = ({ decreaseZoom, isMapGuessed, setIsAreaGuessed, incrementMist
     const [disableButton, setDisableButton] = useState(true);
 
     useEffect(() => {
-        if(value == null){
+        if (value == null) {
             setDisableButton(true);
-        }else{
+        } else {
             setDisableButton(false);
         }
-    }, [value,inputValue])
-    
+    }, [value, inputValue])
+
 
     const lock = () => {
         if (!isMapGuessed) {
@@ -68,6 +68,7 @@ const AreaGuess = ({ decreaseZoom, isMapGuessed, setIsAreaGuessed, incrementMist
             incrementMistake('area');
         }
     }
+
 
     return (
         <Paper sx={{
