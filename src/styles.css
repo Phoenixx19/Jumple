@@ -121,6 +121,7 @@ body {
     font-size: 2vmin;
 }
 
-.MuiGrid2-root {
+/* safari bug lol */
+.z-index-1 {
     z-index: 1;
 }
