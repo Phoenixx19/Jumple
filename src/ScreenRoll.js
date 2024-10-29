@@ -1,10 +1,11 @@
 import MapsJSON from './mapsStructure.json';
 import { Random } from 'random';
+import { getSeed } from './getSeed';
+
+const seed = await getSeed();
 
 export function ScreenRoll() {
-    const seed = new Date().toISOString().slice(0, 10); 
     const rng = new Random(seed);
-
     const maps = MapsJSON.Maps;
     let totalScreens = 0;
 

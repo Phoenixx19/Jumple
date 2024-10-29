@@ -10,14 +10,13 @@ import { Stack } from "@mui/material";
 const roll = ScreenRoll();
 
 
-const ScreenNumberGuess = ({ decreaseZoom, isAreaGuessed, unzoom, incrementMistake, setIsScreenGuessed }) => {
+const ScreenNumberGuess = ({ incrementMistake, guessStatus, setGuessStatus }) => {
     const [number, setNumber] = useState(1);
     const [guessedNumbers, setGuessedNumbers] = useState([]);
     const [buttonDisableState, setButtonDisableState] = useState(false);
-    const [isGuessed, setIsGuessed] = useState(false);
 
     const lock = () => {
-        if (!isAreaGuessed) {
+        if (!guessStatus.isAreaGuessed) {
             return {
                 filter: "blur(5px)",
                 '&::after': {
@@ -46,6 +45,7 @@ const ScreenNumberGuess = ({ decreaseZoom, isAreaGuessed, unzoom, incrementMista
 
 
     function increment() {
+        if (number >= 10) return;
         setNumber(number + 1);
     }
 
@@ -61,16 +61,17 @@ const ScreenNumberGuess = ({ decreaseZoom, isAreaGuessed, unzoom, incrementMista
                 isCorrect: true
             }]);
 
-            setIsGuessed(true);
-            setIsScreenGuessed(true);
-            unzoom();
+            setGuessStatus(prevState => ({
+                ...prevState,
+                "isScreenGuessed": true
+            }));
+
         } else {
             setGuessedNumbers(oldNumbers => [...oldNumbers, {
                 number: number,
                 isCorrect: false
             }]);
 
-            decreaseZoom();
             incrementMistake('screen');
         }
     }
@@ -85,10 +86,10 @@ const ScreenNumberGuess = ({ decreaseZoom, isAreaGuessed, unzoom, incrementMista
 
             <Grid2 container spacing={1}>
                 <Grid2 size={6}>
-                    <Button fullWidth disabled={isGuessed} onClick={decrement} variant="outlined">{"<"}</Button>
+                    <Button fullWidth disabled={guessStatus.isScreenGuessed} onClick={decrement} variant="outlined">{"<"}</Button>
                 </Grid2>
                 <Grid2 size={6}>
-                    <Button fullWidth disabled={isGuessed} onClick={increment} variant="outlined">{">"}</Button>
+                    <Button fullWidth disabled={guessStatus.isScreenGuessed} onClick={increment} variant="outlined">{">"}</Button>
                 </Grid2>
                 <Grid2 size={12}>
                     <Button onClick={() => guess(number)} disabled={buttonDisableState} size="small" sx={{ fontFamily: "JKFontMini", fontSize: "20px", padding: "0" }} fullWidth variant="contained">Guess screen number</Button>

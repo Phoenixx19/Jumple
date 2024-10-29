@@ -9,7 +9,7 @@ import { Paper } from "@mui/material";
 const mapNames = MapsJSON.Maps.map(map => map.MapName);
 const roll = ScreenRoll();
 
-const MapGuess = ({ decreaseZoom, setIsMapGuessed, incrementMistake }) => {
+const MapGuess = ({ incrementMistake, setGuessStatus }) => {
     const [buttonStates, setButtonStates] = useState({});
 
     const handleClick = (map) => {
@@ -23,7 +23,12 @@ const MapGuess = ({ decreaseZoom, setIsMapGuessed, incrementMistake }) => {
                 };
             });
             setButtonStates(newButtonStates);
-            setIsMapGuessed(true);
+
+            setGuessStatus(prevState => ({
+                ...prevState,
+                "isMapGuessed": true
+            }));
+
         } else {
             setButtonStates(prevStates => ({
                 ...prevStates,
@@ -34,13 +39,12 @@ const MapGuess = ({ decreaseZoom, setIsMapGuessed, incrementMistake }) => {
                 }
             }));
 
-            decreaseZoom();
             incrementMistake('map');
         }
     };
 
     return (
-        <Paper  sx={{ padding: 2, textAlign: "center" }} variant="outlined">
+        <Paper sx={{ padding: 2, textAlign: "center" }} variant="outlined">
             <Stack spacing={1} direction="row" justifyContent="space-evenly">
                 {mapNames.map(map => {
                     return (

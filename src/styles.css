@@ -14,13 +14,10 @@
 }
 
 
-
-
-
 body {
     margin: 0;
     width: 100dvw;
-    min-width:600px;
+    height: 100dvh;
     background-image: url("/Maps/jkbackground.jpeg");
     background-size: cover;
     background-position: bottom;
@@ -29,7 +26,7 @@ body {
 
 .background{
     width: 100%;
-    height: 100dvh;
+    height: 100%;
     backdrop-filter: blur(8px);
     background-color: rgba(0, 0, 0, 0.3);
 }
@@ -95,7 +92,7 @@ body {
 
 .logo{
     margin: 0;
-    font-size: 60px;
+    font-size: 7vmin;
     color: white;
 }
 
@@ -106,26 +103,19 @@ body {
     border-radius: 8px;
 }
 
-.timer,
-.nextScreenText{
+.timer{
     margin: 0;
-    font-size: 30px;
+    font-size: 3.5vmin;
     color: white;
 }
 
 .timer{
-    width: 5ch;
-    vertical-align:middle;
-}
-
-.timerDiv{
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
+    text-align: center;
 }
 
 .signature{
     text-align: end;
     margin-right: 1rem;
     color: white;
+    font-size: 2vmin;
 }
