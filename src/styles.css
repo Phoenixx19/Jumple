@@ -105,13 +105,12 @@ body {
 
 .timer{
     margin: 0;
+    margin-left: 10vmin;
     font-size: 3.5vmin;
     color: white;
+    text-align: start;
 }
 
-.timer{
-    text-align: center;
-}
 
 .signature{
     text-align: end;

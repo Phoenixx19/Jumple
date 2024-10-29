@@ -46,14 +46,12 @@ const Timer = () => {
     }, []);
 
     return (
-
-            <p className='timer'>
-                Next screen: {" "}
-                {String(timeRemaining.hours).padStart(2, '0')}:
-                {String(timeRemaining.minutes).padStart(2, '0')}:
-                {String(timeRemaining.seconds).padStart(2, '0')}
-            </p>
-
+        <p className='timer'>
+            Next screen: {" "}
+            {String(timeRemaining.hours).padStart(2, '0')}:
+            {String(timeRemaining.minutes).padStart(2, '0')}:
+            {String(timeRemaining.seconds).padStart(2, '0')}
+        </p>
     );
 };
 
