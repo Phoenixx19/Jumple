@@ -120,8 +120,3 @@ body {
     color: white;
     font-size: 2vmin;
 }
-
-/* safari bug lol */
-.z-index-1 {
-    z-index: 1;
-}

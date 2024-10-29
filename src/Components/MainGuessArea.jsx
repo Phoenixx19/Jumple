@@ -44,13 +44,13 @@ const MainGuessArea = () => {
             </div>
 
             <Grid2 container spacing={2} sx={{ maxWidth: "35rem" }}>
-                <Grid2 size={12} class="z-index-1">
+                <Grid2 style={{ zIndex: 1 }} size={12}>
                     <MapGuess incrementMistake={incrementMistake} setGuessStatus={setGuessStatus} />
                 </Grid2>
-                <Grid2 size={6} class="z-index-1">
+                <Grid2 style={{ zIndex: 1 }} size={6}>
                     <AreaGuess incrementMistake={incrementMistake} guessStatus={guessStatus} setGuessStatus={setGuessStatus} />
                 </Grid2>
-                <Grid2 size={6} class="z-index-1">
+                <Grid2 style={{ zIndex: 1 }} size={6}>
                     <ScreenNumberGuess incrementMistake={incrementMistake} guessStatus={guessStatus} setGuessStatus={setGuessStatus} />
                 </Grid2>
             </Grid2>
