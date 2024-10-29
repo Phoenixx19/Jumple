@@ -120,3 +120,7 @@ body {
     color: white;
     font-size: 2vmin;
 }
+
+.MuiGrid2-root {
+    z-index: 1;
+}
